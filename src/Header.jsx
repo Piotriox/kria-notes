@@ -1,7 +1,7 @@
 import './index.css';
 import { Menu } from 'lucide-react';
 import { useRef, useState, useEffect } from 'react';
-import Preferences from './Preferences.jsx'
+import Preferences from './Webmenu.jsx'
 
 function Header() {
   const menuRef = useRef(null);
