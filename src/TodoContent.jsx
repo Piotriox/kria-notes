@@ -1,11 +1,11 @@
 import './index.css'
 
-function Content() {
+function TodoContent() {
   return(
     <div className="content-container">
-      <p>Content</p>
+      <p>TodoContent</p>
     </div>
   )
 }
 
-export default Content
+export default TodoContent

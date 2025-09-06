@@ -18,7 +18,7 @@ body {
   position: absolute;
   display: flex;
   width: 100vw;
-  height: 8vh;
+  height: 8dvh;
   color: var(--text-color);
 }
 
@@ -54,12 +54,12 @@ body {
 .preferences {
   position: absolute;
   display: flex;
-  width: 0vw;
+  width: 15vw;
   background-color: var(--header-bg);
   height: 92vh;
   top: 8vh;
   border-left: 1px solid var(--border-color);
-  right: 0;
+  right: -15vw;
   transition: all 0.5s ease-in-out;
   z-index: 10;
 }
@@ -126,7 +126,7 @@ body {
 .content-container {
   position: absolute;
   width: 100vw;
-  height: 86vh;
+  height: 86dvh;
   bottom: 6vh;
   left: 0;
   background-color: rgb(253, 248, 237);
@@ -137,7 +137,7 @@ body {
   background-color: var(--header-bg);
   position: absolute;
   width: 100vw;
-  height: 6vh;
+  height: 6dvh;
   bottom: 0;
   display: flex;
   left: 0;
@@ -215,6 +215,42 @@ body {
   to {
     transform: rotate(360deg);
   }
+}
+
+.register {
+  cursor: pointer;
+  background-color: wheat;
+  border: 1px solid var(--border-color);
+  height: 5vh;
+  border-radius: 6px;
+  width: 5vw;
+  position: absolute;
+  right: 115px;
+  top: 11px;
+  user-select: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.register:hover {
+  transform: scale(1.1);
+}
+
+.login {
+  cursor: pointer;
+  background-color: wheat;
+  border: 1px solid var(--border-color);
+  height: 5vh;
+  border-radius: 6px;
+  width: 5vw;
+  position: absolute;
+  right: 40px;
+  top: 11px;
+  user-select: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.login:hover {
+  transform: scale(1.1);
 }
 
 @media (max-width: 768px) {

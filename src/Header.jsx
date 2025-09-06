@@ -18,11 +18,11 @@ function Header() {
       if (active) {
         menuRef.current.style.transform = 'scale(1.3)';
         menuRef.current.style.color = 'rgba(117, 124, 253, 1)';
-        prefRef.current.style.width = '15vw';
+        prefRef.current.style.right = '0vw';
       } else {
         menuRef.current.style.transform = '';
         menuRef.current.style.color = '';
-        prefRef.current.style.width = '0vw';
+        prefRef.current.style.right = '';
       }
     }
   }, [active]);
@@ -32,6 +32,8 @@ function Header() {
       <h1 className="logo-header">Kria Notes</h1>
       <Menu ref={menuRef} className='menu-icon' onClick={handleMenuClick}></Menu>
       <Preferences ref={prefRef}></Preferences>
+      <button className="login">Login</button>
+      <button className="register">Register</button>
     </div>
   )
 }

@@ -1,8 +1,15 @@
 import './index.css';
 import { Notebook, ListChecks, Cog } from 'lucide-react';
 import { useRef, useState, useEffect } from 'react';
-
+import { useNavigate } from 'react-router-dom';
+ 
 function Footer() {
+  function notesButton () {
+    const navigate = useNavigate();
+    const setPage = () => {
+      navigate('/notes');
+    };
+  }
   const todoRef = useRef(null);
   const notesRef = useRef(null);
   const settingsRef = useRef(null);
@@ -44,7 +51,7 @@ function Footer() {
   return (
     <div className="footer">
       <ListChecks className="button" ref={todoRef} onClick={() => handleClick("todo")}></ListChecks>
-      <Notebook className="buttonMid" ref={notesRef} onClick={() => handleClick("notes")}></Notebook>
+      <Notebook className="buttonMid" ref={notesRef} onClick={() => {handleClick("notes"); notesButton();}}></Notebook>
       <Cog className="buttonSet" ref={settingsRef} onClick={() => handleClick("settings")}></Cog>
     </div>
   )
